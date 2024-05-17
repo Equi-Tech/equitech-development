@@ -8,8 +8,7 @@ app_name = 'account'
 urlpatterns = [
     path("",account , name='account'),
     path("dashboard",Dashboard , name='dashboard'),
-
-    path("kyc-reg/",kyc_registration, name='kyc-reg'),
+    path("kyc-reg",kyc_registration, name='kyc-reg'),
   
 
 ]
