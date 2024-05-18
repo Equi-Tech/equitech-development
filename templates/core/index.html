@@ -319,24 +319,24 @@
                         </div>
                         <ul class="features">
                             <li>
-                                <img src="assets/images/icon/check.png" alt="icon"> Login with fingerprint or Face ID.
+                                <img src="{% static 'assets/images/icon/check.png' %}" alt="icon"> Login with fingerprint or Face ID.
                             </li>
                             <li>
-                                <img src="assets/images/icon/check.png" alt="icon"> Simple few Taps to send money
+                                <img src="{% static 'assets/images/icon/check.png' %}" alt="icon"> Simple few Taps to send money
                             </li>
                             <li>
-                                <img src="assets/images/icon/check.png" alt="icon"> View transaction history.
+                                <img src="{% static 'assets/images/icon/check.png' %}" alt="icon"> View transaction history.
                             </li>
                             <li>
-                                <img src="assets/images/icon/check.png" alt="icon"> Get instant App notifications.
+                                <img src="{% static 'assets/images/icon/check.png' %}" alt="icon"> Get instant App notifications.
                             </li>
                         </ul>
                         <div class="brand-area mt-40">
                             <a href="javascript:void(0)">
-                                <img src="assets/images/GooglePlay-btn.png" alt="icon">
+                                <img src="{% static 'assets/images/GooglePlay-btn.png' %}" alt="icon">
                             </a>
                             <a href="javascript:void(0)">
-                                <img src="assets/images/apple-btn.png" alt="icon">
+                                <img src="{% static 'assets/images/apple-btn.png' %}" alt="icon">
                             </a>
                         </div>
                     </div>
@@ -375,7 +375,7 @@
                             <p class="xlr">"Paylio has always been a reliable solution for my business. I am very satisfied with their speedy service and professional customer care. I highly recommend Paylio to businesses with regular overseas payments."</p>
                             <div class="profile-area d-flex align-items-center">
                                 <div class="icon-area">
-                                    <img src="assets/images/testimonials-img-1.png" alt="icon">
+                                    <img src="{% static 'assets/images/testimonials-img-1.png' %}" alt="icon">
                                 </div>
                                 <div class="text-area">
                                     <h5>Aspen Press</h5>
@@ -397,7 +397,7 @@
                             <p class="xlr">"Paylio has always been a reliable solution for my business. I am very satisfied with their speedy service and professional customer care. I highly recommend Paylio to businesses with regular overseas payments."</p>
                             <div class="profile-area d-flex align-items-center">
                                 <div class="icon-area">
-                                    <img src="assets/images/testimonials-img-2.png" alt="icon">
+                                    <img src="{% static 'assets/images/testimonials-img-2.png' %}" alt="icon">
                                 </div>
                                 <div class="text-area">
                                     <h5>Courtney Henry</h5>
@@ -419,7 +419,7 @@
                             <p class="xlr">"Paylio has always been a reliable solution for my business. I am very satisfied with their speedy service and professional customer care. I highly recommend Paylio to businesses with regular overseas payments."</p>
                             <div class="profile-area d-flex align-items-center">
                                 <div class="icon-area">
-                                    <img src="assets/images/testimonials-img-3.png" alt="icon">
+                                    <img src="{% static 'assets/images/testimonials-img-3.png' %}" alt="icon">
                                 </div>
                                 <div class="text-area">
                                     <h5>Paul Howell</h5>
@@ -441,7 +441,7 @@
                             <p class="xlr">"Paylio has always been a reliable solution for my business. I am very satisfied with their speedy service and professional customer care. I highly recommend Paylio to businesses with regular overseas payments."</p>
                             <div class="profile-area d-flex align-items-center">
                                 <div class="icon-area">
-                                    <img src="assets/images/testimonials-img-2.png" alt="icon">
+                                    <img src="{% static 'assets/images/testimonials-img-2.png' %}" alt="icon">
                                 </div>
                                 <div class="text-area">
                                     <h5>Courtney Henry</h5>
@@ -616,7 +616,7 @@
                         <form action="#">
                             <div class="form-group d-flex align-items-center">
                                 <input type="text" placeholder="Your Email Address">
-                                <button><img src="assets/images/icon/arrow-right-2.png" alt="icon"></button>
+                                <button><img src="{% static 'assets/images/icon/arrow-right-2.png' %}" alt="icon"></button>
                             </div>
                         </form>
                     </div>
@@ -636,10 +636,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="social-link d-flex justify-content-sm-end justify-content-center align-items-center">
-                                <a href="javascript:void(0)"><img src="assets/images/icon/facebook.png" alt="icon"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/icon/linkedin.png" alt="icon"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/icon/instagram.png" alt="icon"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/icon/twitter.png" alt="icon"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'assets/images/icon/facebook.png' %}" alt="icon"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'assets/images/icon/linkedin.png' %}" alt="icon"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'assets/images/icon/instagram.png' %}" alt="icon"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'assets/images/icon/twitter.png' %}" alt="icon"></a>
                             </div>
                         </div>
                     </div>
@@ -648,7 +648,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-md-6 col-sm-8 d-flex justify-content-center justify-content-sm-start order-sm-0 order-1">
                             <div class="copyright text-center text-sm-start">
-                                <p> Copyright © 2022 <a href="index.html">Paylio.</a> All Rights Reserved.</p>
+                                <p> Copyright © 2022 <a href="{% url 'core:index' %}">Paylio.</a> All Rights Reserved.</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-4">

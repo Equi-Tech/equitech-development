@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import index
+from .views import index, dashboard
 from .transfare import search_using_account, AmountTranfare, AmountTranfareProcess,TransactionConfirmation,TransfarProcess, TransfarCompleted
 from .transaction import transaction_list, transaction_detail
 from .payment_request import SearchUserRequest, AmountRequest, AmountRequestProcess, RequestConfirmation, RequestCompleted, RequestFinialProcess, settlement_confirmation, settlement_processing, SettlementCompleted, delete_payment_request
 from .credit_card import credit_card_detail, fund_credit_card, withdraw_credit_card, delete_card
-
+# from core.views import dashboard
 
 app_name = 'core'
 
@@ -12,6 +12,7 @@ app_name = 'core'
 
 urlpatterns = [
     path("", index, name='index'),
+    path("dashbord", dashboard, name='dashboard'),
     path('search-account/', search_using_account, name='search-account'),
     path('amount-transfare/<account_number>/',AmountTranfare , name='amount-transfare'),
     path('amount-transfare-process/<account_number>/',AmountTranfareProcess , name='amount-transfare-Process'),
