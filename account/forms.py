@@ -30,7 +30,6 @@ class KYCForm(forms.ModelForm):
             'city',
             'mobile',
             'fax',
-
         ] 
 
         widgets = {
@@ -41,5 +40,4 @@ class KYCForm(forms.ModelForm):
             "state": forms.TextInput(attrs={"placeholder":"State"}),
             "city": forms.TextInput(attrs={"placeholder":"City"}),
             'date_of_birth':DateInput
-
         }   

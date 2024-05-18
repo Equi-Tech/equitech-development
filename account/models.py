@@ -64,11 +64,11 @@ def create_account(sender, instance, created, **kwargs):
     if created:
         Account.objects.create(user=instance)    
        
-# def save_account(sender, instance, **kwargs):
-#     instance.account.save()       
+def save_account(sender, instance, **kwargs):
+    instance.account.save()       
 
-# post_save.connect(create_account,sender=User)
-# post_save.connect(save_account,sender=User)    
+post_save.connect(create_account,sender=User)
+post_save.connect(save_account,sender=User)    
 
 
 class KYC(models.Model):

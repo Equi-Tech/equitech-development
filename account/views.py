@@ -32,11 +32,8 @@ def account(request):
 def kyc_registration(request):
     user = request.user
     account = Account.objects.get(user=user)
-
-
     try:
         kyc = KYC.objects.get(user=user)
-
     except:
         kyc = None
     if request.method == "POST":    
@@ -48,7 +45,6 @@ def kyc_registration(request):
             new_form.save()
             messages.success(request, "KYC Form submitted successfully")
             return redirect("account:dashboard")
-
     else:
         form = KYCForm(instance=kyc) 
 
@@ -56,13 +52,9 @@ def kyc_registration(request):
         "account": account,
         "form": form,
         "kyc": kyc,
-
         }
 
     return render(request, "account/kyc-form.html", context)           
-
-
-
 
 
 def Dashboard(request):
@@ -77,11 +69,8 @@ def Dashboard(request):
         
         recent_transfer = Transaction.objects.filter(sender=request.user, transaction_type="transfer", status="completed").order_by("-id")[:1]
         recent_recieved_transfer = Transaction.objects.filter(reciver=request.user, transaction_type="transfer").order_by("-id")[:1]
-
-
         sender_transaction = Transaction.objects.filter(sender=request.user, transaction_type="transfer").order_by("-id")
         reciever_transaction = Transaction.objects.filter(reciver=request.user, transaction_type="transfer").order_by("-id")
-
         request_sender_transaction = Transaction.objects.filter(sender=request.user, transaction_type="request")
         request_reciever_transaction = Transaction.objects.filter(reciver=request.user, transaction_type="request")
         account = Account.objects.get(user=request.user)
@@ -93,7 +82,6 @@ def Dashboard(request):
                 new_form = form.save(commit=False)
                 new_form.user = request.user
                 new_form.save()
-
                 card_id = new_form.card_id
                 messages.success(request, "Card ADDED Successfully.")
                 return redirect("account:dashboard")
@@ -109,10 +97,8 @@ def Dashboard(request):
         'kyc':kyc,
         'form':form,
         "credit_card":credit_card,
-
         "sender_transaction":sender_transaction,
         "reciever_transaction":reciever_transaction,
-
         'request_sender_transaction':request_sender_transaction,
         'request_reciever_transaction':request_reciever_transaction,
         'recent_transfer':recent_transfer,
