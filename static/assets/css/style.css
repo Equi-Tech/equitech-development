@@ -23,14 +23,14 @@
 :root {
     --body-font: "Ubuntu", sans-serif;
     --body-color: #FFFFFF;
-    --primary-color: #754ffe;
+    --primary-color: #FF7F53;
     --secondary-color: #00FE83;
-    --head-color: #0c266c;
+    --head-color: #FF7F53;
     --section-primary-color: #f2f3f9;
     --section-color: #f5f6fc;
-    --para-color: #0c266c;
+    --para-color: #28282b;
     --border-color: #868ea5;
-    --hover-alt-color: #291b6b;
+    --hover-alt-color: #FF7F53;
 }
 
 .collapsing {
@@ -670,10 +670,10 @@ label {
 
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .nav-link,
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-item {
-    font-weight: 500;
+    /* font-weight: 300; */
     padding: 0 10px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
     background-color: transparent;
     color: var(--para-color);
     transition: 0.3s;
@@ -696,7 +696,7 @@ label {
 
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
     position: absolute;
-    content: "\0043";
+    /* content: "\0043"; */
     border: none;
     font-family: "arafat font";
     font-weight: 400;
@@ -849,8 +849,8 @@ label {
 }
 
 .banner-section .overlay .banner-content .send-money .currency-area .right-side .nice-select:after {
-    border-bottom: 2px solid #0c266c;
-    border-right: 2px solid #0c266c;
+    border-bottom: 2px solid #FF7F53;
+    border-right: 2px solid #FF7F53;
     height: 13px;
     right: 18px;
     top: initial;
@@ -864,7 +864,7 @@ label {
     font-weight: 600;
 }
 
-.banner-section .overlay .banner-content .send-money .currency-area .right-side .nice-select .current::before {
+/* .banner-section .overlay .banner-content .send-money .currency-area .right-side .nice-select .current::before {
     position: absolute;
     content: "";
     width: 30px;
@@ -872,7 +872,7 @@ label {
     left: -40px;
     background-image: url(../images/icon/flag-usa.png);
     background-repeat: no-repeat;
-}
+} */
 
 .banner-section .overlay .banner-content .send-money .currency-area .right-side .nice-select .list {
     width: 100%;
@@ -1449,7 +1449,7 @@ label {
 }
 
 .counter-section .single-area h2 {
-    color: #754ffe;
+    color: #FF7F53;
 }
 
 .counter-section .single-area h2 span {

@@ -8,3 +8,6 @@ def index(request):
 
 def dashboard(request):
     return render(request, 'account/dashboard.html')
+
+def freelancherpayment(request):
+    return render(request, 'core/payments-01.html')

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, dashboard
+from .views import index, dashboard, freelancherpayment
 from .transfare import search_using_account, AmountTranfare, AmountTranfareProcess,TransactionConfirmation,TransfarProcess, TransfarCompleted
 from .transaction import transaction_list, transaction_detail
 from .payment_request import SearchUserRequest, AmountRequest, AmountRequestProcess, RequestConfirmation, RequestCompleted, RequestFinialProcess, settlement_confirmation, settlement_processing, SettlementCompleted, delete_payment_request
@@ -13,6 +13,7 @@ app_name = 'core'
 urlpatterns = [
     path("", index, name='index'),
     path("dashbord", dashboard, name='dashboard'),
+    path("payment-01/", freelancherpayment, name='freelancers'),
     path('search-account/', search_using_account, name='search-account'),
     path('amount-transfare/<account_number>/',AmountTranfare , name='amount-transfare'),
     path('amount-transfare-process/<account_number>/',AmountTranfareProcess , name='amount-transfare-Process'),
