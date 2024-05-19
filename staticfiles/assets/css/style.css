@@ -19,11 +19,11 @@
 # Footer Area
 ============================================*/
 
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --body-font: "Jost", sans-serif;
+    --body-font: "Ubuntu", sans-serif;
     --body-color: #FFFFFF;
-    --primary-color: #4743c9;
+    --primary-color: #754ffe;
     --secondary-color: #00FE83;
     --head-color: #0c266c;
     --section-primary-color: #f2f3f9;
@@ -1449,7 +1449,7 @@ label {
 }
 
 .counter-section .single-area h2 {
-    color: #4743c9;
+    color: #754ffe;
 }
 
 .counter-section .single-area h2 span {
