@@ -24,7 +24,7 @@
                             <div class="single-user">
                                 <div class="left d-flex align-items-center">
                                     <div class="img-area">
-                                        <img style="width: 100px; hight: 100px; border-radius: 50%" src="{{account.user.kyc.image.url}}" alt="image">
+                                        <img style="width: 100px; height: 100px; border-radius: 50%" src="{{account.user.kyc.image.url}}" alt="image">
                                     </div>
                                     <div class="text-area">
                                         <p>{{account.user.kyc.full_name|title}}</p>
@@ -49,9 +49,8 @@
                             <div class="input-area">
                                 <input class="xxlr" onkeyup="CalculateBalance()" placeholder="{{ request.user.account.account_balance|intcomma}}" name="amount-send" type="number" id="amount-send">
                                 <select>
-                                    <option value="1">USD</option>
+                                    <option value="1">inprogress</option>
                                     <option value="2">USD</option>
-                                    <option value="3">USD</option>
                                 </select>
                             </div>
                             <p>Available Balance<b>${{request.user.account.account_balance}}</b></p>
@@ -86,11 +85,11 @@
                                 let errors = []
                                 new_bal = available_balance - sendAmount
                                 new_balance.innerHTML = `New Balance <b> $${new_bal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b>`;
-                                total_to_pay.innerHTML = `USD <b> $${sendAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b>`;
+                                total_to_pay.innerHTML = `INR <b> $${sendAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b>`;
 
                                 if (new_bal < 0){
                                     new_balance.style.color = "red"
-                                    alert('You can only send $' + available_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+                                    alert('You can only send ₹' + available_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
 
                                 }else{
                                     new_balance.style.color = 'black'
