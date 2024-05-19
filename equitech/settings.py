@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-^&!5-)coclwlzhoml1_$)^=(cw+*af!e^e@9nyk4e$ljwfr&)q
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOST = ['*']
+ALLOWED_HOST = ['*',
+                'equitech.up.railway.app',
+                ]
 
 
 # Application definition
