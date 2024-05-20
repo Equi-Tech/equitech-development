@@ -29,7 +29,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOST = ['*',
-                '*.railway.app',
+                # '*.railway.app',
                 ]
 
 
