@@ -81,7 +81,7 @@ class KYC(models.Model):
     gender = models.CharField(choices=GENDER, max_length=40)
     identity_type = models.CharField(choices=IDENTITY_TYPE, max_length=140)
     identity_image = models.ImageField(upload_to="kyc", null=True, blank=True)
-    date_of_birth = models.DateTimeField(auto_now_add=False)
+    date_of_birth = models.DateField(auto_now_add=False)
     signature = models.ImageField(upload_to="kyc")
 
     # Address
@@ -92,7 +92,7 @@ class KYC(models.Model):
     # Contact Detail
     mobile = models.CharField(max_length=1000)
     fax = models.CharField(max_length=1000)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
 
 
     def __str__(self):

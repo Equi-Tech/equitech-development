@@ -13,17 +13,22 @@ def account(request):
     if request.user.is_authenticated:
         try:
             kyc = KYC.objects.get(user=user)
-        except:
+        except Account.DoesNotExist:
             messages.warning(request, "You Need To Submit YOur KYC")
             return redirect("account:kyc-form")
 
-        account = Account.objects.get(user=user)
+        try:
+            kyc = KYC.objects.get(user=user)
+        except KYC.DoesNotExist:
+            messages.warning(request, "You Need To Submit Your KYC")
+            return redirect("account:kyc-form")
     else:
         messages.warning(request, "You Need To Login")
         return redirect("userauths:sign-in")
+    
     context = {
-        'account':account,
-        'kyc':kyc,
+        'account': account,
+        'kyc': kyc,
     }
     return render(request, 'account/account.html', context)
 
