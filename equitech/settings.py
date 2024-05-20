@@ -29,7 +29,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOST = ['*',
-                'equitech.up.railway.app',
+                '*.railway.app',
                 ]
 
 
