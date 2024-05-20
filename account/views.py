@@ -110,3 +110,9 @@ def Dashboard(request):
         'recent_recieved_transfer':recent_recieved_transfer,
     }
     return render(request, 'account/dashboard.html', context)
+
+def withdraw(request):
+    return render(request, 'account/withdraw-money-step-1.html')
+
+def help(request):
+    return render(request, 'account/help.html')

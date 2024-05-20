@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('core.urls')),
     path('user/', include('userauths.urls')),
     path('account/', include('account.urls')),
+    # path('/', include('voice-bot.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,4 +1,5 @@
 from core.models import Notification
+import requests
 
 
 def default(request):
